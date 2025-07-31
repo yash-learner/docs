@@ -185,6 +185,8 @@ plugs = [plugin_name]
 
 ### How do I develop plugins locally?
 
+### Backend
+
 1. Update `plug_config.py`:
 
 ```python
@@ -209,6 +211,26 @@ subprocess.check_call(
 ```bash
 make re-build
 make up
+```
+
+### Frontend
+
+1. Update .env:
+
+```env
+REACT_ENABLED_APPS="ohcnetwork/plugin_name_fe@localhost:5173"
+```
+
+2. Generate pluginMap and install plugin configurations:
+
+```bash
+npm run setup
+```
+
+3. Run the server
+
+```bash
+npm run dev
 ```
 
 ### What should I do if a plugin isn't loading?
