@@ -215,19 +215,31 @@ make up
 
 ### Frontend
 
-1. Update .env:
+1. Setup & run the plug according to the commands in plug's package.json
+
+For example: care_abdm_fe
+
+```bash
+npm install
+```
+
+```bash
+npm run start
+```
+
+2. Update .env in care_fe:
 
 ```env
 REACT_ENABLED_APPS="ohcnetwork/plugin_name_fe@localhost:5173"
 ```
 
-2. Generate pluginMap and install plugin configurations:
+3. Generate pluginMap and install plugin configurations in care_fe:
 
 ```bash
 npm run setup
 ```
 
-3. Run the server
+4. Run care_fe
 
 ```bash
 npm run dev
